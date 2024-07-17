@@ -1,10 +1,11 @@
 import { Text, View } from "react-native";
 import { style } from "./style";
+import Button from "./src/components/Button/button";
 
 export default function App() {
   return (
     <View style={style.container}>
-      <Text>Hello world</Text>
+      <Button text="Acessar" />
     </View>
   );
 }
