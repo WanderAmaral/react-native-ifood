@@ -1,11 +1,25 @@
-import { Text, View } from "react-native";
+import { SafeAreaView, Text, View, StyleSheet } from "react-native";
 import { style } from "./style";
 import Button from "./src/components/Button/button";
+import Login from "./src/screens/login/login";
 
 export default function App() {
   return (
-    <View style={style.container}>
-      <Button text="Acessar" />
-    </View>
+    <SafeAreaView style={style.container}>
+      <View style={styles.content}>
+        <Login />
+      </View>
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  content: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
